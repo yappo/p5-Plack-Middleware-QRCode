@@ -1,0 +1,33 @@
+# NAME
+
+Plack::Middleware::QRCode -
+
+# SYNOPSIS
+
+  use Plack::Builder;
+  use Plack::Middleware::QRCode;
+  builder {
+      enable 'QRCode',
+          path => qr{^/qrcode}, type => 'png';
+      $app;
+  }
+
+Request
+
+  $ plackup -p 5000 app.psgi
+  $ wget "http://localhost:5000/qrcode?body=foobar
+
+# DESCRIPTION
+
+Plack::Middleware::QRCode is
+
+# AUTHOR
+
+Kazuhiro Osawa <yappo {at} shibuya {dot} pl>
+
+# SEE ALSO
+
+# LICENSE
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
